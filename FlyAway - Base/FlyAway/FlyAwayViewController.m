@@ -86,7 +86,13 @@
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint position = [touch locationInView:self.view];
+    
     //Mettre le hero en mouvement si le doigt de l'utilisateur est assez proche
+    if(monHero != nil)
+    {
+        monHero.isMoving = YES;
+    }
+
 	
 }
 
@@ -94,9 +100,13 @@
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint position = [touch locationInView:self.view];
-	if (monHero.isMoving == YES) {
+	if (monHero.isMoving == YES)
+    {
 		//Deplacement du heros jusqu'a la position du doigt
-
+        if(monHero != nil)
+        {
+            [monHero moveCenterToPosition:position animated:FALSE];
+        }
 		
 		//Verification des obstacles
 
