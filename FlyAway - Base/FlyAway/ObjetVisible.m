@@ -18,7 +18,7 @@
 	b = fabs(point.y - self.center.y);
 	hypotenuse = sqrt(a*a + b*b) ;
 	
-	if (hypotenuse <= self.frame.size.width) {
+	if (hypotenuse <= (self.frame.size.width)/4) {
 		return YES;
 	} else {
 		return NO;

@@ -90,7 +90,8 @@
     //Mettre le hero en mouvement si le doigt de l'utilisateur est assez proche
     if(monHero != nil)
     {
-        monHero.isMoving = YES;
+        if([monHero estProcheDuPoint:position])
+            monHero.isMoving = YES;
     }
 
 	
@@ -112,6 +113,10 @@
 
 		
 		//Verification de la ligne d'arrivee
+        if(position.y <= HAUTEUR_ARRIVEE)
+        {
+            [self partieGagnee];
+        }
 
 	}
 }
