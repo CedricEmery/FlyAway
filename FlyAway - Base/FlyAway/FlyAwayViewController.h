@@ -13,6 +13,7 @@
 @interface FlyAwayViewController : UIViewController {
 	IBOutlet Hero* monHero;
 	IBOutlet UILabel* messageHaut;
+    IBOutlet UILabel *messageDepart;
 	NSMutableArray* listeObstacles;
 }
 

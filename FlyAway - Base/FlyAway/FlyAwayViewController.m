@@ -44,7 +44,7 @@
 
 - (void)viewDidLoad
 {
-	[monHero moveHome:NO];
+	[self moveHome:NO];
     [self placerObstaclesAleatoirement];
 }
 
@@ -64,7 +64,7 @@
 
 - (void)partieTerminee
 {
-	[monHero moveHome:YES];
+	[self moveHome:YES];
 	if (monHero.isMoving) {
 		monHero.isMoving = NO;
 	}
@@ -113,7 +113,7 @@
 
 		
 		//Verification de la ligne d'arrivee
-        if(position.y <= HAUTEUR_ARRIVEE)
+        if(position.y <= messageHaut.frame.size.height)
         {
             [self partieGagnee];
         }
@@ -128,6 +128,10 @@
 	}
 }
 
-
+- (void)moveHome:(BOOL)animated
+{
+	CGPoint homeCenter = CGPointMake(LARGEUR_ECRAN/2, HAUTEUR_ECRAN - (monHero.bounds.size.height/2));
+	[monHero moveCenterToPosition:homeCenter animated:animated];
+}
 
 @end

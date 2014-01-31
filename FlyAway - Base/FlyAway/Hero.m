@@ -8,18 +8,12 @@
 
 #import "Hero.h"
 
-#import "Constantes.h"
-
 @implementation Hero
 
 @synthesize isMoving;
 
 
 
-- (void)moveHome:(BOOL)animated
-{
-	CGPoint homeCenter = CGPointMake(LARGEUR_ECRAN/2, HAUTEUR_ECRAN - (HAUTEUR_HERO/2));
-	[self moveCenterToPosition:homeCenter animated:animated];
-}
+
 
 @end

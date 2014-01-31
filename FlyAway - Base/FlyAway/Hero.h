@@ -14,6 +14,5 @@
 }
 @property BOOL isMoving;
 
-- (void)moveHome:(BOOL)animated;
 
 @end
