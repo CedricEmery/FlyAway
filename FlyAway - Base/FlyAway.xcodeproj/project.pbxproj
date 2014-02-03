@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C72D73B189FFA4E00C373DC /* start_line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D735189FFA4E00C373DC /* start_line.jpg */; };
+		0C72D73C189FFA4E00C373DC /* finish_line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D736189FFA4E00C373DC /* finish_line.jpg */; };
+		0C72D73D189FFA4E00C373DC /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D737189FFA4E00C373DC /* bg.jpg */; };
+		0C72D73E189FFA4E00C373DC /* good_bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D738189FFA4E00C373DC /* good_bird.png */; };
+		0C72D73F189FFA4E00C373DC /* pigs.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D739189FFA4E00C373DC /* pigs.png */; };
+		0C72D740189FFA4E00C373DC /* Bad_Bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D73A189FFA4E00C373DC /* Bad_Bird.png */; };
 		F8B4AD0B1860A41400C30785 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B4AD0A1860A41400C30785 /* Foundation.framework */; };
 		F8B4AD0D1860A41400C30785 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B4AD0C1860A41400C30785 /* CoreGraphics.framework */; };
 		F8B4AD0F1860A41400C30785 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B4AD0E1860A41400C30785 /* UIKit.framework */; };
@@ -40,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C72D735189FFA4E00C373DC /* start_line.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = start_line.jpg; path = ../../../../../icons_fly/start_line.jpg; sourceTree = "<group>"; };
+		0C72D736189FFA4E00C373DC /* finish_line.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = finish_line.jpg; path = ../../../../../icons_fly/finish_line.jpg; sourceTree = "<group>"; };
+		0C72D737189FFA4E00C373DC /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg.jpg; path = ../../../../../icons_fly/bg.jpg; sourceTree = "<group>"; };
+		0C72D738189FFA4E00C373DC /* good_bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = good_bird.png; path = ../../../../../icons_fly/good_bird.png; sourceTree = "<group>"; };
+		0C72D739189FFA4E00C373DC /* pigs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pigs.png; path = ../../../../../icons_fly/pigs.png; sourceTree = "<group>"; };
+		0C72D73A189FFA4E00C373DC /* Bad_Bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bad_Bird.png; path = ../../../../../icons_fly/Bad_Bird.png; sourceTree = "<group>"; };
 		F8B4AD071860A41400C30785 /* FlyAway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyAway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B4AD0A1860A41400C30785 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8B4AD0C1860A41400C30785 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -179,6 +191,12 @@
 		F8B4AD3F1860A44E00C30785 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C72D735189FFA4E00C373DC /* start_line.jpg */,
+				0C72D736189FFA4E00C373DC /* finish_line.jpg */,
+				0C72D737189FFA4E00C373DC /* bg.jpg */,
+				0C72D738189FFA4E00C373DC /* good_bird.png */,
+				0C72D739189FFA4E00C373DC /* pigs.png */,
+				0C72D73A189FFA4E00C373DC /* Bad_Bird.png */,
 				F8B4AD401860A44E00C30785 /* Ciel.jpg */,
 				F8B4AD411860A44E00C30785 /* Montgolfiere.png */,
 				F8B4AD431860A44E00C30785 /* Vol.png */,
@@ -262,11 +280,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C72D73B189FFA4E00C373DC /* start_line.jpg in Resources */,
+				0C72D73D189FFA4E00C373DC /* bg.jpg in Resources */,
 				F8B4AD451860A44E00C30785 /* Ciel.jpg in Resources */,
+				0C72D73E189FFA4E00C373DC /* good_bird.png in Resources */,
 				F8B4AD461860A44E00C30785 /* Montgolfiere.png in Resources */,
 				F8B4AD481860A44E00C30785 /* Vol.png in Resources */,
+				0C72D740189FFA4E00C373DC /* Bad_Bird.png in Resources */,
+				0C72D73F189FFA4E00C373DC /* pigs.png in Resources */,
 				F8B4AD231860A41400C30785 /* Images.xcassets in Resources */,
 				F8B4AD151860A41400C30785 /* InfoPlist.strings in Resources */,
+				0C72D73C189FFA4E00C373DC /* finish_line.jpg in Resources */,
 				F8B4AD1E1860A41400C30785 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +524,7 @@
 				F8B4AD3B1860A41400C30785 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8B4AD3C1860A41400C30785 /* Build configuration list for PBXNativeTarget "FlyAwayTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +533,7 @@
 				F8B4AD3E1860A41400C30785 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
