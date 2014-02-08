@@ -16,7 +16,7 @@
 - (id)initWithPosition:(CGPoint)point
 {
     if (self = [super initWithFrame:CGRectMake(point.x, point.y, LARGEUR_OBSTACLE, HAUTEUR_OBSTACLE)]) {
-        self.image = [UIImage imageNamed:@"Montgolfiere.png"];
+        self.image = [UIImage imageNamed:@"pigs.png"];
     }
     return self;
 }
