@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0220A618A6450E00A965BD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0220A518A6450E00A965BD /* iAd.framework */; };
 		0C72D73B189FFA4E00C373DC /* start_line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D735189FFA4E00C373DC /* start_line.jpg */; };
 		0C72D73C189FFA4E00C373DC /* finish_line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D736189FFA4E00C373DC /* finish_line.jpg */; };
 		0C72D73D189FFA4E00C373DC /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C72D737189FFA4E00C373DC /* bg.jpg */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0220A518A6450E00A965BD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		0C72D735189FFA4E00C373DC /* start_line.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = start_line.jpg; path = ../../../../../icons_fly/start_line.jpg; sourceTree = "<group>"; };
 		0C72D736189FFA4E00C373DC /* finish_line.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = finish_line.jpg; path = ../../../../../icons_fly/finish_line.jpg; sourceTree = "<group>"; };
 		0C72D737189FFA4E00C373DC /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg.jpg; path = ../../../../../icons_fly/bg.jpg; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0220A618A6450E00A965BD /* iAd.framework in Frameworks */,
 				F8B4AD0D1860A41400C30785 /* CoreGraphics.framework in Frameworks */,
 				F8B4AD0F1860A41400C30785 /* UIKit.framework in Frameworks */,
 				F8B4AD0B1860A41400C30785 /* Foundation.framework in Frameworks */,
@@ -129,6 +132,7 @@
 		F8B4AD091860A41400C30785 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C0220A518A6450E00A965BD /* iAd.framework */,
 				F8B4AD0A1860A41400C30785 /* Foundation.framework */,
 				F8B4AD0C1860A41400C30785 /* CoreGraphics.framework */,
 				F8B4AD0E1860A41400C30785 /* UIKit.framework */,

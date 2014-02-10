@@ -13,27 +13,32 @@
 #import "Constantes.h"
 
 @implementation FlyAwayViewController
+@synthesize adView;
 
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    [adView setHidden:NO];
+     NSLog(@"Showing");
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+   [adView setHidden:YES];
+    NSLog(@"Hidden");
+}
 - (float)valeurAleatoireCompriseEntre:(float)borne1 et:(float)borne2
 {
 	return (rand() * (borne2 - borne1) / RAND_MAX) + borne1;
 }
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-
 
 /*
-// Override to allow orientations other than the default portrait orientation.
+// Override to allow orientations other than the default portrait orientation.*/
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -42,8 +47,12 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    adView.delegate = self;
+    [adView setHidden:YES];
 	[self moveHome:NO];
     [self placerObstaclesAleatoirement];
 }
@@ -133,5 +142,6 @@
 	CGPoint homeCenter = CGPointMake(LARGEUR_ECRAN/2, HAUTEUR_ECRAN - (monHero.bounds.size.height/2));
 	[monHero moveCenterToPosition:homeCenter animated:animated];
 }
+
 
 @end
