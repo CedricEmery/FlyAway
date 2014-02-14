@@ -8,7 +8,7 @@
  */
 
 #define LARGEUR_ECRAN 320
-#define HAUTEUR_ECRAN 480
+#define HAUTEUR_ECRAN 560
 
 #define LARGEUR_HERO 100
 #define HAUTEUR_HERO 36

@@ -19,5 +19,9 @@
 }
 
 @property (nonatomic,retain) IBOutlet ADBannerView *adView;
+
+
+- (BOOL)checkArrive:(CGPoint)position;
+
 @end
 

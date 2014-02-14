@@ -15,6 +15,9 @@
 @implementation FlyAwayViewController
 @synthesize adView;
 
+
+NSTimer* mov;
+
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
     [adView setHidden:NO];
@@ -60,14 +63,18 @@
 - (void)placerObstaclesAleatoirement
 {
     listeObstacles = [[NSMutableArray alloc] init];
-	for (int i = 0; i < 4; i++) {
-		float x = 0.0f; //generer une position horizontale aléatoire
-		float y = 0.0f; //generer une position verticale aléatoire
+	for (int i = 0; i < 4; i++)
+    {
+		float x = [self valeurAleatoireCompriseEntre:0 et:LARGEUR_ECRAN];
+		float y = 0.0f;
+        
 		Obstacle* newObstacle = [[Obstacle alloc] initWithPosition:CGPointMake(x, y)];
 		[listeObstacles addObject:newObstacle];
+        
 		[self.view addSubview:newObstacle];
         
 	}
+    //mov = [NSTimer scheduledTimerWithTimeInterval:0.016 target:self selector:@selector(moveObstacle:) userInfo:nil repeats:YES];
 }
 
 
@@ -122,12 +129,32 @@
 
 		
 		//Verification de la ligne d'arrivee
-        if(position.y <= messageHaut.frame.size.height)
+        if([self checkArrive:position])
         {
             [self partieGagnee];
         }
 
 	}
+}
+
+-(void)moveObstacle
+{
+    for(int i = 0 ; i < listeObstacles.count ; i++)
+    {
+        [listeObstacles objectAtIndex:i];
+    }
+}
+
+- (BOOL)checkArrive:(CGPoint)position
+{
+    if(position.y <= HAUTEUR_ARRIVEE)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
