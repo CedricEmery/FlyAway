@@ -11,7 +11,7 @@
 #import "Obstacle.h"
 #import "Hero.h"
 #import "Constantes.h"
-
+#
 @implementation FlyAwayViewController
 @synthesize adView;
 
