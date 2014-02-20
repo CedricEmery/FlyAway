@@ -11,11 +11,12 @@
 #import "Obstacle.h"
 #import "Hero.h"
 #import "Constantes.h"
+#import <AVFoundation/AVFoundation.h>
 #
 @implementation FlyAwayViewController
 @synthesize adView;
 
-
+AVAudioPlayer *player;
 NSTimer* mov;
 
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner
@@ -29,6 +30,9 @@ NSTimer* mov;
    [adView setHidden:YES];
     NSLog(@"Hidden");
 }
+
+
+
 - (float)valeurAleatoireCompriseEntre:(float)borne1 et:(float)borne2
 {
 	return (rand() * (borne2 - borne1) / RAND_MAX) + borne1;
@@ -55,7 +59,7 @@ NSTimer* mov;
 {
     [super viewDidLoad];
     adView.delegate = self;
-    [adView setHidden:YES];
+    [adView setHidden:NO];
 	[self moveHome:NO];
     [self placerObstaclesAleatoirement];
 }
@@ -155,6 +159,13 @@ NSTimer* mov;
     {
         return FALSE;
     }
+}
+
+- (IBAction)soundButton:(id)sender {
+    NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"fasound" ofType:@"mp3" ]];
+    player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioFile error:nil];
+    player.volume = 0.80;
+    [player play];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
+#import <AVFoundation/AVFoundation.h>
 @class Hero;
 
 @interface FlyAwayViewController : UIViewController <ADBannerViewDelegate> {
@@ -22,6 +23,7 @@
 
 
 - (BOOL)checkArrive:(CGPoint)position;
+- (IBAction)soundButton:(id)sender;
 
 @end
 
