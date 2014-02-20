@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C0220A618A6450E00A965BD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0220A518A6450E00A965BD /* iAd.framework */; };
+		0C32B4A318B610570009E851 /* fals_640_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C32B4A118B610570009E851 /* fals_640_960.png */; };
+		0C32B4A418B610570009E851 /* fals_640_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C32B4A218B610570009E851 /* fals_640_1136.png */; };
 		0C39616718AE502D0016E5D2 /* start_line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C39616118AE502D0016E5D2 /* start_line.jpg */; };
 		0C39616818AE502D0016E5D2 /* finish_line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C39616218AE502D0016E5D2 /* finish_line.jpg */; };
 		0C39616918AE502D0016E5D2 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C39616318AE502D0016E5D2 /* bg.jpg */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		0C0220A518A6450E00A965BD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		0C32B4A118B610570009E851 /* fals_640_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fals_640_960.png; sourceTree = "<group>"; };
+		0C32B4A218B610570009E851 /* fals_640_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fals_640_1136.png; sourceTree = "<group>"; };
 		0C39616118AE502D0016E5D2 /* start_line.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = start_line.jpg; sourceTree = "<group>"; };
 		0C39616218AE502D0016E5D2 /* finish_line.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = finish_line.jpg; sourceTree = "<group>"; };
 		0C39616318AE502D0016E5D2 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 		F8B4AD3F1860A44E00C30785 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C32B4A118B610570009E851 /* fals_640_960.png */,
+				0C32B4A218B610570009E851 /* fals_640_1136.png */,
 				0C39616118AE502D0016E5D2 /* start_line.jpg */,
 				0C39616218AE502D0016E5D2 /* finish_line.jpg */,
 				0C39616318AE502D0016E5D2 /* bg.jpg */,
@@ -285,8 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C39616718AE502D0016E5D2 /* start_line.jpg in Resources */,
+				0C32B4A418B610570009E851 /* fals_640_1136.png in Resources */,
 				0C39616918AE502D0016E5D2 /* bg.jpg in Resources */,
 				F8B4AD451860A44E00C30785 /* Ciel.jpg in Resources */,
+				0C32B4A318B610570009E851 /* fals_640_960.png in Resources */,
 				0C39616A18AE502D0016E5D2 /* good_bird.png in Resources */,
 				F8B4AD461860A44E00C30785 /* Montgolfiere.png in Resources */,
 				F8B4AD481860A44E00C30785 /* Vol.png in Resources */,
