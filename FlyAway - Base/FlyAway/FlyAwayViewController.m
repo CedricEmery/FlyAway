@@ -25,6 +25,8 @@ NSTimer* mov;
 {
     [adView setHidden:NO];
      NSLog(@"Showing");
+    
+    
 }
 
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
@@ -64,6 +66,12 @@ NSTimer* mov;
     [adView setHidden:NO];
 	[self moveHome:NO];
     [self placerObstaclesAleatoirement];
+    //audio
+    NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"game_audio_loop" ofType:@"mp3" ]];
+    player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioFile error:nil];
+    player.volume = 0.80;
+    player.numberOfLoops = -1;
+    [player play];
 }
 
 - (void)placerObstaclesAleatoirement
@@ -164,11 +172,20 @@ NSTimer* mov;
 }
 
 - (IBAction)soundButton:(id)sender {
-    NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"game_audio_loop" ofType:@"mp3" ]];
-    player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioFile error:nil];
-    player.volume = 0.80;
-    player.numberOfLoops = -1;
-    [player play];
+    
+    
+    UIImage* unselectedImage = [UIImage imageNamed:@"speaker_on"];
+    UIImage* selectedImage = [UIImage imageNamed:@"speaker_off"];
+    
+    if ([sender isSelected]) {
+        [sender setImage:unselectedImage forState:UIControlStateNormal];
+        [sender setSelected:NO];
+        player.volume = 0.80;
+    } else {
+        [sender setImage:selectedImage forState:UIControlStateSelected];
+        [sender setSelected:YES];
+        player.volume = 0.00;
+    }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

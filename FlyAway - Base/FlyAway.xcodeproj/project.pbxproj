@@ -31,6 +31,8 @@
 		0CD26F8C18B6335A0004352A /* fai-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD26F8918B6335A0004352A /* fai-29.png */; };
 		0CD26F8D18B6335A0004352A /* faic-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD26F8A18B6335A0004352A /* faic-40.png */; };
 		0CD26F8E18B6335A0004352A /* faic-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD26F8B18B6335A0004352A /* faic-60.png */; };
+		0CFE6A5A18C0E0F800572077 /* speaker_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CFE6A5818C0E0F800572077 /* speaker_off.png */; };
+		0CFE6A5B18C0E0F800572077 /* speaker_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CFE6A5918C0E0F800572077 /* speaker_on.png */; };
 		F8B4AD0B1860A41400C30785 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B4AD0A1860A41400C30785 /* Foundation.framework */; };
 		F8B4AD0D1860A41400C30785 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B4AD0C1860A41400C30785 /* CoreGraphics.framework */; };
 		F8B4AD0F1860A41400C30785 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B4AD0E1860A41400C30785 /* UIKit.framework */; };
@@ -90,6 +92,8 @@
 		0CD26F8918B6335A0004352A /* fai-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fai-29.png"; sourceTree = "<group>"; };
 		0CD26F8A18B6335A0004352A /* faic-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faic-40.png"; sourceTree = "<group>"; };
 		0CD26F8B18B6335A0004352A /* faic-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faic-60.png"; sourceTree = "<group>"; };
+		0CFE6A5818C0E0F800572077 /* speaker_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_off.png; sourceTree = "<group>"; };
+		0CFE6A5918C0E0F800572077 /* speaker_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_on.png; sourceTree = "<group>"; };
 		F8B4AD071860A41400C30785 /* FlyAway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyAway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B4AD0A1860A41400C30785 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8B4AD0C1860A41400C30785 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -247,6 +251,8 @@
 		F8B4AD3F1860A44E00C30785 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0CFE6A5818C0E0F800572077 /* speaker_off.png */,
+				0CFE6A5918C0E0F800572077 /* speaker_on.png */,
 				0C11B1C718B9E6EA00B531D5 /* settings.png */,
 				0C9CDE0B18B75E7B009C4F76 /* finish.png */,
 				0C9CDE0C18B75E7B009C4F76 /* start.png */,
@@ -348,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFE6A5A18C0E0F800572077 /* speaker_off.png in Resources */,
 				0C39616718AE502D0016E5D2 /* start_line.jpg in Resources */,
 				0CD26F8E18B6335A0004352A /* faic-60.png in Resources */,
 				0C32B4A418B610570009E851 /* fals_640_1136.png in Resources */,
@@ -363,6 +370,7 @@
 				0C9CDE0E18B75E7B009C4F76 /* start.png in Resources */,
 				F8B4AD461860A44E00C30785 /* Montgolfiere.png in Resources */,
 				0CD26F8C18B6335A0004352A /* fai-29.png in Resources */,
+				0CFE6A5B18C0E0F800572077 /* speaker_on.png in Resources */,
 				F8B4AD481860A44E00C30785 /* Vol.png in Resources */,
 				0CD26F8D18B6335A0004352A /* faic-40.png in Resources */,
 				0CD26F8818B632910004352A /* fasound.mp3 in Resources */,
