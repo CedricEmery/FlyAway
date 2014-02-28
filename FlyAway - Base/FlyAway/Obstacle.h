@@ -11,6 +11,7 @@
 
 @interface Obstacle : ObjetVisible {
 
+    
 }
 
 - (id)initWithPosition:(CGPoint)point;

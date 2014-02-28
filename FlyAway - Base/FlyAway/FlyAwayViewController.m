@@ -11,8 +11,10 @@
 #import "Obstacle.h"
 #import "Hero.h"
 #import "Constantes.h"
+
+//Audio
 #import <AVFoundation/AVFoundation.h>
-#
+
 @implementation FlyAwayViewController
 @synthesize adView;
 
@@ -162,9 +164,10 @@ NSTimer* mov;
 }
 
 - (IBAction)soundButton:(id)sender {
-    NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"fasound" ofType:@"mp3" ]];
+    NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"game_audio_loop" ofType:@"mp3" ]];
     player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioFile error:nil];
     player.volume = 0.80;
+    player.numberOfLoops = -1;
     [player play];
 }
 

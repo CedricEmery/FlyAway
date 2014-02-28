@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C0220A618A6450E00A965BD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0220A518A6450E00A965BD /* iAd.framework */; };
+		0C11B1C818B9E6EA00B531D5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C11B1C718B9E6EA00B531D5 /* settings.png */; };
 		0C274B1018B6282500D6E3C6 /* hp.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C274B0F18B6282500D6E3C6 /* hp.png */; };
 		0C32B4A318B610570009E851 /* fals_640_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C32B4A118B610570009E851 /* fals_640_960.png */; };
 		0C32B4A418B610570009E851 /* fals_640_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C32B4A218B610570009E851 /* fals_640_1136.png */; };
@@ -17,6 +18,15 @@
 		0C39616A18AE502D0016E5D2 /* good_bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C39616418AE502D0016E5D2 /* good_bird.png */; };
 		0C39616B18AE502D0016E5D2 /* pigs.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C39616518AE502D0016E5D2 /* pigs.png */; };
 		0C39616C18AE502D0016E5D2 /* Bad_Bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C39616618AE502D0016E5D2 /* Bad_Bird.png */; };
+		0C435D8518C0967500AE58DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C435D8418C0967500AE58DE /* AudioToolbox.framework */; };
+		0C435D8718C09DF900AE58DE /* game_audio_loop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C435D8618C09DF900AE58DE /* game_audio_loop.mp3 */; };
+		0C435D8D18C0B2A600AE58DE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C435D8C18C0B2A600AE58DE /* SettingsViewController.m */; };
+		0C435D9018C0B30D00AE58DE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C435D8F18C0B30D00AE58DE /* HomeViewController.m */; };
+		0C9CDDFC18B7545E009C4F76 /* fly-away.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9CDDFB18B7545E009C4F76 /* fly-away.png */; };
+		0C9CDE0018B7557B009C4F76 /* Angry-Birds-Space.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C9CDDFF18B7557B009C4F76 /* Angry-Birds-Space.jpg */; };
+		0C9CDE0218B7572D009C4F76 /* bg_640_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9CDE0118B7572D009C4F76 /* bg_640_1136.png */; };
+		0C9CDE0D18B75E7B009C4F76 /* finish.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9CDE0B18B75E7B009C4F76 /* finish.png */; };
+		0C9CDE0E18B75E7B009C4F76 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9CDE0C18B75E7B009C4F76 /* start.png */; };
 		0CD26F8818B632910004352A /* fasound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0CD26F8718B632910004352A /* fasound.mp3 */; };
 		0CD26F8C18B6335A0004352A /* fai-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD26F8918B6335A0004352A /* fai-29.png */; };
 		0CD26F8D18B6335A0004352A /* faic-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD26F8A18B6335A0004352A /* faic-40.png */; };
@@ -55,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		0C0220A518A6450E00A965BD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		0C11B1C718B9E6EA00B531D5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		0C274B0F18B6282500D6E3C6 /* hp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp.png; sourceTree = "<group>"; };
 		0C32B4A118B610570009E851 /* fals_640_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fals_640_960.png; sourceTree = "<group>"; };
 		0C32B4A218B610570009E851 /* fals_640_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fals_640_1136.png; sourceTree = "<group>"; };
@@ -64,6 +75,17 @@
 		0C39616418AE502D0016E5D2 /* good_bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_bird.png; sourceTree = "<group>"; };
 		0C39616518AE502D0016E5D2 /* pigs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pigs.png; sourceTree = "<group>"; };
 		0C39616618AE502D0016E5D2 /* Bad_Bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bad_Bird.png; sourceTree = "<group>"; };
+		0C435D8418C0967500AE58DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0C435D8618C09DF900AE58DE /* game_audio_loop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_audio_loop.mp3; sourceTree = "<group>"; };
+		0C435D8B18C0B2A600AE58DE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		0C435D8C18C0B2A600AE58DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		0C435D8E18C0B30D00AE58DE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		0C435D8F18C0B30D00AE58DE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		0C9CDDFB18B7545E009C4F76 /* fly-away.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fly-away.png"; sourceTree = "<group>"; };
+		0C9CDDFF18B7557B009C4F76 /* Angry-Birds-Space.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Angry-Birds-Space.jpg"; sourceTree = "<group>"; };
+		0C9CDE0118B7572D009C4F76 /* bg_640_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_640_1136.png; sourceTree = "<group>"; };
+		0C9CDE0B18B75E7B009C4F76 /* finish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finish.png; sourceTree = "<group>"; };
+		0C9CDE0C18B75E7B009C4F76 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		0CD26F8718B632910004352A /* fasound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fasound.mp3; sourceTree = "<group>"; };
 		0CD26F8918B6335A0004352A /* fai-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fai-29.png"; sourceTree = "<group>"; };
 		0CD26F8A18B6335A0004352A /* faic-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faic-40.png"; sourceTree = "<group>"; };
@@ -104,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C435D8518C0967500AE58DE /* AudioToolbox.framework in Frameworks */,
 				0C0220A618A6450E00A965BD /* iAd.framework in Frameworks */,
 				F8B4AD0D1860A41400C30785 /* CoreGraphics.framework in Frameworks */,
 				F8B4AD0F1860A41400C30785 /* UIKit.framework in Frameworks */,
@@ -127,6 +150,7 @@
 		0CD26F8618B6327A0004352A /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				0C435D8618C09DF900AE58DE /* game_audio_loop.mp3 */,
 				0CD26F8718B632910004352A /* fasound.mp3 */,
 			);
 			name = Audio;
@@ -154,6 +178,7 @@
 		F8B4AD091860A41400C30785 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C435D8418C0967500AE58DE /* AudioToolbox.framework */,
 				0C0220A518A6450E00A965BD /* iAd.framework */,
 				F8B4AD0A1860A41400C30785 /* Foundation.framework */,
 				F8B4AD0C1860A41400C30785 /* CoreGraphics.framework */,
@@ -167,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				0CD26F8618B6327A0004352A /* Audio */,
+				F8B4AD3F1860A44E00C30785 /* Images */,
 				F8B4AD4A1860A49500C30785 /* Constantes.h */,
 				F8B4AD4B1860A49500C30785 /* FlyAwayViewController.h */,
 				F8B4AD4C1860A49500C30785 /* FlyAwayViewController.m */,
@@ -176,12 +202,15 @@
 				F8B4AD501860A49500C30785 /* ObjetVisible.m */,
 				F8B4AD511860A49500C30785 /* Obstacle.h */,
 				F8B4AD521860A49500C30785 /* Obstacle.m */,
-				F8B4AD3F1860A44E00C30785 /* Images */,
 				F8B4AD191860A41400C30785 /* AppDelegate.h */,
 				F8B4AD1A1860A41400C30785 /* AppDelegate.m */,
 				F8B4AD1C1860A41400C30785 /* Main.storyboard */,
 				F8B4AD221860A41400C30785 /* Images.xcassets */,
 				F8B4AD111860A41400C30785 /* Supporting Files */,
+				0C435D8B18C0B2A600AE58DE /* SettingsViewController.h */,
+				0C435D8C18C0B2A600AE58DE /* SettingsViewController.m */,
+				0C435D8E18C0B30D00AE58DE /* HomeViewController.h */,
+				0C435D8F18C0B30D00AE58DE /* HomeViewController.m */,
 			);
 			path = FlyAway;
 			sourceTree = "<group>";
@@ -218,6 +247,12 @@
 		F8B4AD3F1860A44E00C30785 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C11B1C718B9E6EA00B531D5 /* settings.png */,
+				0C9CDE0B18B75E7B009C4F76 /* finish.png */,
+				0C9CDE0C18B75E7B009C4F76 /* start.png */,
+				0C9CDE0118B7572D009C4F76 /* bg_640_1136.png */,
+				0C9CDDFF18B7557B009C4F76 /* Angry-Birds-Space.jpg */,
+				0C9CDDFB18B7545E009C4F76 /* fly-away.png */,
 				0CD26F8918B6335A0004352A /* fai-29.png */,
 				0CD26F8A18B6335A0004352A /* faic-40.png */,
 				0CD26F8B18B6335A0004352A /* faic-60.png */,
@@ -317,19 +352,26 @@
 				0CD26F8E18B6335A0004352A /* faic-60.png in Resources */,
 				0C32B4A418B610570009E851 /* fals_640_1136.png in Resources */,
 				0C39616918AE502D0016E5D2 /* bg.jpg in Resources */,
+				0C9CDE0D18B75E7B009C4F76 /* finish.png in Resources */,
 				F8B4AD451860A44E00C30785 /* Ciel.jpg in Resources */,
+				0C11B1C818B9E6EA00B531D5 /* settings.png in Resources */,
 				0C32B4A318B610570009E851 /* fals_640_960.png in Resources */,
+				0C9CDE0018B7557B009C4F76 /* Angry-Birds-Space.jpg in Resources */,
 				0C274B1018B6282500D6E3C6 /* hp.png in Resources */,
 				0C39616A18AE502D0016E5D2 /* good_bird.png in Resources */,
+				0C435D8718C09DF900AE58DE /* game_audio_loop.mp3 in Resources */,
+				0C9CDE0E18B75E7B009C4F76 /* start.png in Resources */,
 				F8B4AD461860A44E00C30785 /* Montgolfiere.png in Resources */,
 				0CD26F8C18B6335A0004352A /* fai-29.png in Resources */,
 				F8B4AD481860A44E00C30785 /* Vol.png in Resources */,
 				0CD26F8D18B6335A0004352A /* faic-40.png in Resources */,
 				0CD26F8818B632910004352A /* fasound.mp3 in Resources */,
+				0C9CDE0218B7572D009C4F76 /* bg_640_1136.png in Resources */,
 				0C39616C18AE502D0016E5D2 /* Bad_Bird.png in Resources */,
 				0C39616B18AE502D0016E5D2 /* pigs.png in Resources */,
 				F8B4AD231860A41400C30785 /* Images.xcassets in Resources */,
 				F8B4AD151860A41400C30785 /* InfoPlist.strings in Resources */,
+				0C9CDDFC18B7545E009C4F76 /* fly-away.png in Resources */,
 				0C39616818AE502D0016E5D2 /* finish_line.jpg in Resources */,
 				F8B4AD1E1860A41400C30785 /* Main.storyboard in Resources */,
 			);
@@ -356,6 +398,8 @@
 				F8B4AD561860A49500C30785 /* Obstacle.m in Sources */,
 				F8B4AD531860A49500C30785 /* FlyAwayViewController.m in Sources */,
 				F8B4AD171860A41400C30785 /* main.m in Sources */,
+				0C435D8D18C0B2A600AE58DE /* SettingsViewController.m in Sources */,
+				0C435D9018C0B30D00AE58DE /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
