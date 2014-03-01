@@ -17,6 +17,8 @@
 	IBOutlet UILabel* messageHaut;
     IBOutlet UILabel *messageDepart;
 	NSMutableArray* listeObstacles;
+    
+    NSTimer * timeToMove;
 }
 
 @property (nonatomic,retain) IBOutlet ADBannerView *adView;
@@ -24,6 +26,7 @@
 
 - (BOOL)checkArrive:(CGPoint)position;
 - (IBAction)soundButton:(id)sender;
+- (void)moveAllObstacle;
 
 @end
 

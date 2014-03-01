@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "ObjetVisible.h"
+#import "Obstacle.h"
 
 @interface Hero : ObjetVisible {
 	BOOL isMoving;
 }
 @property BOOL isMoving;
 
+- (BOOL)isTouchingObstacle:(Obstacle*)monObstacle;
 
 @end

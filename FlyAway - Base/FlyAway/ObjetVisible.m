@@ -25,6 +25,7 @@
 	}
 }
 
+
 - (void)moveCenterToPosition:(CGPoint)newPosition
 {
 	[self moveCenterToPosition:newPosition animated:NO];

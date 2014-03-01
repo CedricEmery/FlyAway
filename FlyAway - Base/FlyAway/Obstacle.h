@@ -10,9 +10,16 @@
 #import "ObjetVisible.h"
 
 @interface Obstacle : ObjetVisible {
-
+    
+    int xOrientation;
+    int yOrientation;
     
 }
 
 - (id)initWithPosition:(CGPoint)point;
+- (void)getFirstOrientation;
+- (void)move;
+- (void)checkScreenCollision;
+- (void)deleteObstacle;
+
 @end

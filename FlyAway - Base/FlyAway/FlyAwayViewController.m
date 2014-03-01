@@ -19,7 +19,6 @@
 @synthesize adView;
 
 AVAudioPlayer *player;
-NSTimer* mov;
 
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
@@ -79,16 +78,22 @@ NSTimer* mov;
     listeObstacles = [[NSMutableArray alloc] init];
 	for (int i = 0; i < 4; i++)
     {
-		float x = [self valeurAleatoireCompriseEntre:0 et:LARGEUR_ECRAN];
-		float y = 0.0f;
-        
-		Obstacle* newObstacle = [[Obstacle alloc] initWithPosition:CGPointMake(x, y)];
-		[listeObstacles addObject:newObstacle];
-        
-		[self.view addSubview:newObstacle];
-        
+		[self addObstacle];
 	}
-    //mov = [NSTimer scheduledTimerWithTimeInterval:0.016 target:self selector:@selector(moveObstacle:) userInfo:nil repeats:YES];
+    timeToMove = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(moveAllObstacle) userInfo:nil repeats:YES];
+}
+
+- (void)addObstacle
+{
+    float x = [self valeurAleatoireCompriseEntre:(0 + (LARGEUR_OBSTACLE / 2) + 10) et:(LARGEUR_ECRAN - (LARGEUR_OBSTACLE / 2) - 10)];
+    float y = HAUTEUR_ARRIVEE + (HAUTEUR_OBSTACLE / 2) + 5;
+    
+    Obstacle* newObstacle = [[Obstacle alloc] initWithPosition:CGPointMake(x, y)];
+    newObstacle.getFirstOrientation;
+    
+    [listeObstacles addObject:newObstacle];
+    
+    [self.view addSubview:newObstacle];
 }
 
 
@@ -140,22 +145,46 @@ NSTimer* mov;
         }
 		
 		//Verification des obstacles
-
+        if([self checkCollision])
+        {
+            [self partiePerdue];
+            
+            if([listeObstacles count] >= 1)
+            {
+                id deletedObstacle = [listeObstacles objectAtIndex:([listeObstacles count] - 1)];
+                [deletedObstacle deleteObstacle];
+                [listeObstacles removeObject:[listeObstacles objectAtIndex:([listeObstacles count] - 1)]];
+            }
+        }
 		
 		//Verification de la ligne d'arrivee
         if([self checkArrive:position])
         {
             [self partieGagnee];
+            [self addObstacle];
         }
 
 	}
 }
 
--(void)moveObstacle
+-(BOOL)checkCollision
 {
     for(int i = 0 ; i < listeObstacles.count ; i++)
     {
-        [listeObstacles objectAtIndex:i];
+        id monObstacle = [listeObstacles objectAtIndex:i];
+        
+        if([monHero isTouchingObstacle:monObstacle])
+            return YES;
+    }
+    return FALSE;
+}
+
+-(void)moveAllObstacle
+{
+    for(int i = 0 ; i < listeObstacles.count ; i++)
+    {
+        id objet = [listeObstacles objectAtIndex:i];
+        [objet move];
     }
 }
 
