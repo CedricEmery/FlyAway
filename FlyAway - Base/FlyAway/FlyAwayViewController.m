@@ -61,10 +61,15 @@ AVAudioPlayer *player;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Pub
     adView.delegate = self;
     [adView setHidden:NO];
-	[self moveHome:NO];
+	
+    //flyAway
+    [self moveHome:NO];
     [self placerObstaclesAleatoirement];
+    
     //audio
     NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"game_audio_loop" ofType:@"mp3" ]];
     player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioFile error:nil];
@@ -149,12 +154,17 @@ AVAudioPlayer *player;
         {
             [self partiePerdue];
             
-            if([listeObstacles count] >= 1)
+            if([listeObstacles count] > 1)
             {
                 id deletedObstacle = [listeObstacles objectAtIndex:([listeObstacles count] - 1)];
                 [deletedObstacle deleteObstacle];
                 [listeObstacles removeObject:[listeObstacles objectAtIndex:([listeObstacles count] - 1)]];
             }
+            else{
+                UIAlertView *alert =[[UIAlertView alloc]
+                                     initWithTitle:@"You Loose ! " message:@"Vous avez perdu" delegate:self cancelButtonTitle:@"OK"
+                                     otherButtonTitles:nil, nil];
+                [alert show];            }
         }
 		
 		//Verification de la ligne d'arrivee
@@ -229,6 +239,8 @@ AVAudioPlayer *player;
 	CGPoint homeCenter = CGPointMake(LARGEUR_ECRAN/2, HAUTEUR_ECRAN - (monHero.bounds.size.height/2));
 	[monHero moveCenterToPosition:homeCenter animated:animated];
 }
+
+
 
 
 @end

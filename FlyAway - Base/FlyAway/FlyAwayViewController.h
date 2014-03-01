@@ -18,7 +18,7 @@
     IBOutlet UILabel *messageDepart;
 	NSMutableArray* listeObstacles;
     
-    NSTimer * timeToMove;
+    NSTimer *timeToMove;
 }
 
 @property (nonatomic,retain) IBOutlet ADBannerView *adView;
