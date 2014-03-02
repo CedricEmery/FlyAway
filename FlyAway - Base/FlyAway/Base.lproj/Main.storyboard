@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VIu-6e-hAT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VIu-6e-hAT">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Settings View Controller - Settings-->
@@ -87,7 +87,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dlb-GV-gsg">
                                 <rect key="frame" x="10" y="516" width="26" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="hp.png">
+                                <state key="normal" title="Button" image="speaker_on.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -121,6 +121,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dku-if-O4Y">
+                                <rect key="frame" x="10" y="470" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -128,6 +135,7 @@
                     <connections>
                         <outlet property="lifeIndicator" destination="fwg-67-6fJ" id="6s2-lg-J2f"/>
                         <outlet property="monHero" destination="mZb-Zv-gfr" id="hah-XH-otQ"/>
+                        <outlet property="scoreIndicator" destination="Dku-if-O4Y" id="0cN-fW-o2f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -211,7 +219,7 @@
                                 </connections>
                             </button>
                             <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Hsh-dP-4in">
-                                <rect key="frame" x="0.0" y="473.00000086501228" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="473.00000180445204" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                             </adBannerView>
                         </subviews>
@@ -231,8 +239,8 @@
         <image name="bg_640_1136.png" width="640" height="1136"/>
         <image name="finish.png" width="1920" height="538"/>
         <image name="good_bird.png" width="3220" height="3044"/>
-        <image name="hp.png" width="300" height="300"/>
         <image name="settings.png" width="64" height="64"/>
+        <image name="speaker_on.png" width="32" height="32"/>
         <image name="start.png" width="1920" height="538"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

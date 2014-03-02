@@ -19,11 +19,14 @@
 	NSMutableArray* listeObstacles;
     
     NSTimer *timeToMove;
+    
+    int maxLevel;
 }
 
 
 
 @property (strong, nonatomic) IBOutlet UILabel *lifeIndicator;
+@property (strong, nonatomic) IBOutlet UILabel *scoreIndicator;
 
 - (BOOL)checkArrive:(CGPoint)position;
 - (IBAction)soundButton:(id)sender;

@@ -57,7 +57,7 @@ AVAudioPlayer *player;
     //audio
     NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"game_audio_loop" ofType:@"mp3" ]];
     player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioFile error:nil];
-    player.volume = 0.00;
+    player.volume = 0.80;
     player.numberOfLoops = -1;
     [player play];
 }
@@ -88,6 +88,8 @@ AVAudioPlayer *player;
 
 - (void)partieTerminee
 {
+    [self displayScore];
+    
 	[self moveHome:YES];
 	if (monHero.isMoving) {
 		monHero.isMoving = NO;
@@ -97,8 +99,8 @@ AVAudioPlayer *player;
 -  (void)partieGagnee
 {
 	messageHaut.text = @"Gagné!";
-	[self partieTerminee];
-}
+    maxLevel++;
+	[self partieTerminee];}
 
 - (void)partiePerdue
 {
@@ -137,7 +139,6 @@ AVAudioPlayer *player;
 		//Verification des obstacles
         if([self checkCollision])
         {
-            [self partiePerdue];
             monHero.life--;
             _lifeIndicator.text=[NSString stringWithFormat:@"Vie : %d",monHero.life];
             //NSLog(@"%d",monHero.life--);
@@ -173,15 +174,21 @@ AVAudioPlayer *player;
                     AudioServicesPlaySystemSound(soundID);
                     
                     UIAlertView *alert =[[UIAlertView alloc]
-                                         initWithTitle:@"You Loose ! " message:[NSString stringWithFormat:@"Vous avez perdu"] delegate:self cancelButtonTitle:@"OK"
+                                         initWithTitle:@"You Loose ! " message:[NSString stringWithFormat:@"Vous avez perdu \n votre score est de : %ld", [self getScore]] delegate:self cancelButtonTitle:@"OK"
                                          otherButtonTitles:nil, nil];
                     [alert show];
                     
                     [player play];
                     player.volume= 0.80;
                     monHero.life=3;
+                    _lifeIndicator.text=[NSString stringWithFormat:@"Vie : %d",monHero.life];
+                    _scoreIndicator.text=[NSString stringWithFormat:@"Score : 0"];
+                    maxLevel = 0;
+                    
                 }
                 
+                
+            [self partiePerdue];
                 
             }
             else
@@ -197,11 +204,25 @@ AVAudioPlayer *player;
 		//Verification de la ligne d'arrivee
         if([self checkArrive:position])
         {
-            [self partieGagnee];
             [self addObstacle];
+            [self partieGagnee];
         }
 
 	}
+}
+
+- (void)displayScore
+{
+        _scoreIndicator.text=[NSString stringWithFormat:@"Score : %ld",[self getScore]];
+}
+
+- (long)getScore
+{
+    int nbLifeLose = 3 - monHero.life;
+    
+    long score = 100 * maxLevel - 50 * nbLifeLose;
+    
+    return score;
 }
 
 -(BOOL)checkCollision
