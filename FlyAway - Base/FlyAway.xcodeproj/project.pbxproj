@@ -21,6 +21,7 @@
 		0C39616C18AE502D0016E5D2 /* Bad_Bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C39616618AE502D0016E5D2 /* Bad_Bird.png */; };
 		0C435D8518C0967500AE58DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C435D8418C0967500AE58DE /* AudioToolbox.framework */; };
 		0C435D8718C09DF900AE58DE /* game_audio_loop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C435D8618C09DF900AE58DE /* game_audio_loop.mp3 */; };
+		0C435D8D18C0B2A600AE58DE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C435D8C18C0B2A600AE58DE /* SettingsViewController.m */; };
 		0C435D9018C0B30D00AE58DE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C435D8F18C0B30D00AE58DE /* HomeViewController.m */; };
 		0C9CDDFC18B7545E009C4F76 /* fly-away.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9CDDFB18B7545E009C4F76 /* fly-away.png */; };
 		0C9CDE0018B7557B009C4F76 /* Angry-Birds-Space.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C9CDDFF18B7557B009C4F76 /* Angry-Birds-Space.jpg */; };
@@ -83,6 +84,8 @@
 		0C39616618AE502D0016E5D2 /* Bad_Bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bad_Bird.png; sourceTree = "<group>"; };
 		0C435D8418C0967500AE58DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0C435D8618C09DF900AE58DE /* game_audio_loop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_audio_loop.mp3; sourceTree = "<group>"; };
+		0C435D8B18C0B2A600AE58DE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		0C435D8C18C0B2A600AE58DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		0C435D8E18C0B30D00AE58DE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		0C435D8F18C0B30D00AE58DE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		0C9CDDFB18B7545E009C4F76 /* fly-away.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fly-away.png"; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				F8B4AD1C1860A41400C30785 /* Main.storyboard */,
 				F8B4AD221860A41400C30785 /* Images.xcassets */,
 				F8B4AD111860A41400C30785 /* Supporting Files */,
+				0C435D8B18C0B2A600AE58DE /* SettingsViewController.h */,
+				0C435D8C18C0B2A600AE58DE /* SettingsViewController.m */,
 				0C435D8E18C0B30D00AE58DE /* HomeViewController.h */,
 				0C435D8F18C0B30D00AE58DE /* HomeViewController.m */,
 			);
@@ -417,6 +422,7 @@
 				F8B4AD561860A49500C30785 /* Obstacle.m in Sources */,
 				F8B4AD531860A49500C30785 /* FlyAwayViewController.m in Sources */,
 				F8B4AD171860A41400C30785 /* main.m in Sources */,
+				0C435D8D18C0B2A600AE58DE /* SettingsViewController.m in Sources */,
 				0C435D9018C0B30D00AE58DE /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
