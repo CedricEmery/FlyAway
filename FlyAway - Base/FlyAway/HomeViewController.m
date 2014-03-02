@@ -7,12 +7,23 @@
 //
 
 #import "HomeViewController.h"
-
-@interface HomeViewController ()
-
-@end
+#import <AVFoundation/AVFoundation.h>
 
 @implementation HomeViewController
+@synthesize adView;
+AVAudioPlayer *player;
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    [adView setHidden:NO];
+    NSLog(@"Showing");   
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    [adView setHidden:YES];
+    NSLog(@"Hidden");
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,6 +39,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //Pub
+    adView.delegate = self;
+    [adView setHidden:NO];
+    //audio
+    NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"pacman_intro" ofType:@"mp3" ]];
+    player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioFile error:nil];
+    player.volume = 0.80;
+    [player play];
 }
 
 - (void)didReceiveMemoryWarning

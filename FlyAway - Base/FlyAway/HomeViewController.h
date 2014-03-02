@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
+@interface HomeViewController : UIViewController <ADBannerViewDelegate>{
+    ADBannerView *adView;
+}
 
-@interface HomeViewController : UIViewController
-
-
+@property (nonatomic,retain) IBOutlet ADBannerView *adView;
 
 
 @end

@@ -12,9 +12,7 @@
 @implementation Hero
 
 @synthesize isMoving;
-
-
-
+@synthesize life;
 - (BOOL)isTouchingObstacle:(Obstacle*)monObstacle
 {
     BOOL result = NO;

@@ -14,26 +14,12 @@
 
 //Audio
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @implementation FlyAwayViewController
-@synthesize adView;
+
 
 AVAudioPlayer *player;
-
--(void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    [adView setHidden:NO];
-     NSLog(@"Showing");
-    
-    
-}
-
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-   [adView setHidden:YES];
-    NSLog(@"Hidden");
-}
-
 
 
 - (float)valeurAleatoireCompriseEntre:(float)borne1 et:(float)borne2
@@ -62,10 +48,8 @@ AVAudioPlayer *player;
 {
     [super viewDidLoad];
     
-    //Pub
-    adView.delegate = self;
-    [adView setHidden:NO];
-	
+    
+	monHero.life = 3;
     //flyAway
     [self moveHome:NO];
     [self placerObstaclesAleatoirement];
@@ -73,7 +57,7 @@ AVAudioPlayer *player;
     //audio
     NSURL *audioFile=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"game_audio_loop" ofType:@"mp3" ]];
     player = [[AVAudioPlayer alloc]initWithContentsOfURL:audioFile error:nil];
-    player.volume = 0.80;
+    player.volume = 0.00;
     player.numberOfLoops = -1;
     [player play];
 }
@@ -141,6 +125,7 @@ AVAudioPlayer *player;
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint position = [touch locationInView:self.view];
+    
 	if (monHero.isMoving == YES)
     {
 		//Deplacement du heros jusqu'a la position du doigt
@@ -153,18 +138,60 @@ AVAudioPlayer *player;
         if([self checkCollision])
         {
             [self partiePerdue];
+            monHero.life--;
+            _lifeIndicator.text=[NSString stringWithFormat:@"Vie : %d",monHero.life];
+            //NSLog(@"%d",monHero.life--);
             
-            if([listeObstacles count] > 1)
+            if([listeObstacles count] >1)
             {
-                id deletedObstacle = [listeObstacles objectAtIndex:([listeObstacles count] - 1)];
-                [deletedObstacle deleteObstacle];
-                [listeObstacles removeObject:[listeObstacles objectAtIndex:([listeObstacles count] - 1)]];
+                if (monHero.life >0) {
+                    //monHero.life--;
+                    id deletedObstacle = [listeObstacles objectAtIndex:([listeObstacles count] - 1)];
+                    [deletedObstacle deleteObstacle];
+                    [listeObstacles removeObject:[listeObstacles objectAtIndex:([listeObstacles count] - 1)]];
+                    
+                    //lecture du son de défaite en tant que son systeme
+                    //A priori moins lourd que AVPlayer pour les petits fichiers.
+                    CFBundleRef mainBundle = CFBundleGetMainBundle();
+                    CFURLRef soundFileUrlRef;
+                    soundFileUrlRef =CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"crash_sound",CFSTR ("mp3"),NULL);
+                    UInt32 soundID;
+                    AudioServicesCreateSystemSoundID(soundFileUrlRef, &soundID);
+                    AudioServicesPlaySystemSound(soundID);
+                }
+                else{
+                    [player pause];
+                    player.volume= 0.10;
+                    
+                    //lecture du son de défaite en tant que son systeme
+                    //A priori moins lourd que AVPlayer pour les petits fichiers.
+                    CFBundleRef mainBundle = CFBundleGetMainBundle();
+                    CFURLRef soundFileUrlRef;
+                    soundFileUrlRef =CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"loose_sound",CFSTR ("mp3"),NULL);
+                    UInt32 soundID;
+                    AudioServicesCreateSystemSoundID(soundFileUrlRef, &soundID);
+                    AudioServicesPlaySystemSound(soundID);
+                    
+                    UIAlertView *alert =[[UIAlertView alloc]
+                                         initWithTitle:@"You Loose ! " message:[NSString stringWithFormat:@"Vous avez perdu"] delegate:self cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil, nil];
+                    [alert show];
+                    
+                    [player play];
+                    player.volume= 0.80;
+                    monHero.life=3;
+                }
+                
+                
             }
-            else{
-                UIAlertView *alert =[[UIAlertView alloc]
-                                     initWithTitle:@"You Loose ! " message:@"Vous avez perdu" delegate:self cancelButtonTitle:@"OK"
-                                     otherButtonTitles:nil, nil];
-                [alert show];            }
+            else
+            {
+               
+                [self moveAllObstacle];
+                [self addObstacle];
+                [self moveAllObstacle];
+            }
+            
         }
 		
 		//Verification de la ligne d'arrivee

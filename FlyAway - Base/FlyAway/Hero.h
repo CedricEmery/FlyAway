@@ -12,9 +12,10 @@
 
 @interface Hero : ObjetVisible {
 	BOOL isMoving;
+    int life:3;
 }
 @property BOOL isMoving;
+@property (nonatomic,assign) int life;
 
 - (BOOL)isTouchingObstacle:(Obstacle*)monObstacle;
-
 @end

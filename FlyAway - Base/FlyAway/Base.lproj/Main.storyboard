@@ -77,11 +77,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start.png" id="BYl-rV-QGz">
-                                <rect key="frame" x="0.0" y="509" width="320" height="39"/>
+                                <rect key="frame" x="0.0" y="509" width="320" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="good_bird.png" id="mZb-Zv-gfr" customClass="Hero">
-                                <rect key="frame" x="119" y="471" width="66" height="57"/>
+                                <rect key="frame" x="130" y="470" width="66" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dlb-GV-gsg">
@@ -114,16 +114,19 @@
                                     <segue destination="o73-Cw-iO2" kind="modal" id="QFJ-av-Kvt"/>
                                 </connections>
                             </button>
-                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Hsh-dP-4in">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                            </adBannerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vie : 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fwg-67-6fJ">
+                                <rect key="frame" x="-6" y="487" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="G9u-s4-RYo"/>
                     <connections>
-                        <outlet property="adView" destination="Hsh-dP-4in" id="MIb-po-mQF"/>
+                        <outlet property="lifeIndicator" destination="fwg-67-6fJ" id="6s2-lg-J2f"/>
                         <outlet property="monHero" destination="mZb-Zv-gfr" id="hah-XH-otQ"/>
                     </connections>
                 </viewController>
@@ -207,10 +210,17 @@
                                     <segue destination="o73-Cw-iO2" kind="modal" id="JhD-Dv-Zes"/>
                                 </connections>
                             </button>
+                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Hsh-dP-4in">
+                                <rect key="frame" x="0.0" y="473.00000086501228" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="FlyAway Angry Birds Mod" id="Dah-Ww-pwh"/>
+                    <connections>
+                        <outlet property="adView" destination="Hsh-dP-4in" id="6uG-Oc-BBA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpb-g0-Z7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
