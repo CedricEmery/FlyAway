@@ -145,11 +145,9 @@ AVAudioPlayer *player;
             
             if([listeObstacles count] >1)
             {
-                if (monHero.life >0) {
-                    //monHero.life--;
-                    id deletedObstacle = [listeObstacles objectAtIndex:([listeObstacles count] - 1)];
-                    [deletedObstacle deleteObstacle];
-                    [listeObstacles removeObject:[listeObstacles objectAtIndex:([listeObstacles count] - 1)]];
+                if (monHero.life >0)
+                {
+                    [self deleteObstacle];
                     
                     //lecture du son de défaite en tant que son systeme
                     //A priori moins lourd que AVPlayer pour les petits fichiers.
@@ -160,7 +158,8 @@ AVAudioPlayer *player;
                     AudioServicesCreateSystemSoundID(soundFileUrlRef, &soundID);
                     AudioServicesPlaySystemSound(soundID);
                 }
-                else{
+                else
+                {
                     [player pause];
                     player.volume= 0.10;
                     
@@ -185,6 +184,13 @@ AVAudioPlayer *player;
                     _scoreIndicator.text=[NSString stringWithFormat:@"Score : 0"];
                     maxLevel = 0;
                     
+                    while( listeObstacles.count != 4)
+                    {
+                        if(listeObstacles.count < 4)
+                            [self addObstacle];
+                        else
+                            [self deleteObstacle];
+                    }
                 }
                 
                 
@@ -209,6 +215,13 @@ AVAudioPlayer *player;
         }
 
 	}
+}
+
+- (void)deleteObstacle
+{
+    id deletedObstacle = [listeObstacles objectAtIndex:([listeObstacles count] - 1)];
+    [deletedObstacle deleteObstacle];
+    [listeObstacles removeObject:[listeObstacles objectAtIndex:([listeObstacles count] - 1)]];
 }
 
 - (void)displayScore
